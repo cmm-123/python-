@@ -1,0 +1,8 @@
+def mp(number):
+    for i in range(len(number) - 1):  # 这个循环负责设置冒泡排序进行的次数
+        for j in range(len(number) - i - 1):  # j为列表下标
+            if number[j] > number[j + 1]:
+                number[j], number[j + 1] = number[j + 1], number[j]
+    return number
+print(mp([1,2,6,0.3,2,0.5,-1,2.4]))
+#次代码输出：[-1, 0.3, 0.5, 1, 2, 2, 2.4, 6]
