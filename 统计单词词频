@@ -1,0 +1,7 @@
+import re
+f=open(r'C:\Users\Administrator\Desktop\Walden.txt','r')
+txt=f.read()
+txt=txt.lower() #大写转小写
+words=txt.split()
+for word in words:
+    print('{}--{} times'.format(word,words.count(word)))
