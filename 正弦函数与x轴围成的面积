@@ -7,3 +7,30 @@ for i in range(n+1):
     h=x*y                     #每一个矩阵的面积
     sum=sum+h                 #求和
 print(sum)
+#次代码结果为：3.999999868405276
+
+
+import math
+sum=0
+n=10000
+x=(2*math.pi)/n
+y=[]
+for i in range(n+1):
+    y.append(abs(math.sin(i*x)))
+for j in y:
+    h=x*j
+    sum=sum+h
+print(sum)
+#次代码结果为：3.999999868405276
+
+
+import math                            #导入math模块
+num = 10000                            #设置正弦函数分成的分数
+x = []                                 #x轴上每一份对应的值
+for i in range(num+1):                #计算每一份的角度值
+    x.append(2*math.pi/num*i)
+y = []                                 #y轴上每一份对应的值
+for j in x:                           #每一角度所对应的高度
+    y.append(abs(math.sin(j)))
+print(2*math.pi*sum(y)/num)           #面积
+#次代码结果为：3.9999998684052582
