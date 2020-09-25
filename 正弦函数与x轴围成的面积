@@ -1,0 +1,9 @@
+import math                   #导入math模版
+sum=0
+n=10000                       #x轴被分成多少份
+x=(2*math.pi)/num             #宽度
+for i in range(n+1):          
+    y=abs(math.sin(i*x))      #求高度
+    h=x*y                     #每一个矩阵的面积
+    sum=sum+h                 #求和
+print(sum)
