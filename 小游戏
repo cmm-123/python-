@@ -15,9 +15,6 @@ while len(list1) > 2:
     list1.pop(0)
 c,d =list1
 print("最后剩下的两个站位：" + str(c) + "，" + str(d))
-if m == c or m == d:
-    print("You win")
-else:
-    print("You lost")
+
     
     
