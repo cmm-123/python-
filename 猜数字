@@ -1,0 +1,32 @@
+from tkinter import *  #导入tkinter库
+import tkinter.simpledialog as dl
+import tkinter.messagebox as mb
+import random
+#设置GUI
+root = Tk() #创建窗口对象的背景色
+w = Label(root,text="猜数字游戏") #创建一个标签，名字为猜数字游戏
+w.pack()  #进入消息循环
+ 
+mb.showinfo("欢迎", "欢迎参加猜数字游戏")
+ 
+number = random.randint(0,100) #游戏的答案是随机数字0-99
+ 
+while True:
+    for i in range(6): #一共有七次机会
+        guess = dl.askinteger("Number","请输入你猜的数字！")
+
+        if guess == number:
+            output = "恭喜你，猜对啦！"
+            mb.showinfo("Hint: ",output)
+            break
+        elif guess < number:
+            output = "猜错了，答案应该更大一些！你还有"+str(5-i)+"次机会"
+            mb.showinfo("Hint: ",output)
+        else:
+            output = "猜错了，答案应该更小一些！你还有"+str(5-i)+"次机会"
+            mb.showinfo("Hint: ", output)
+        if i == 5:
+            output = "游戏结束"
+            mb.showinfo("Hint:",output)
+    break
+print("Done")
